@@ -739,3 +739,9 @@ grid-template-columns: 1fr 6fr 1fr;
   display: flex;
   flex-direction: column;
 }
+
+.empty {
+  padding: 0 5vmin 0 5vmin;
+  grid-column: 5;
+  grid-row: 4;
+}
