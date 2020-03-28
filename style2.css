@@ -97,6 +97,7 @@ html {
   box-shadow: 0 1vmin #999;
   -webkit-animation: pulse 1s ease infinite;
 
+
   /* margin-top: 3vmin; */
 
 }
@@ -277,20 +278,18 @@ p+p {
   display: flex;
   flex-direction: column;
 
+  align-content: center;
   width: 100vw;
-  height: 100vh;
 
-  justify-content: center;
-  align-items: center;
+  margin-top: 5vmin;
 }
 
 /* parent div that contains cards and navigation buttons */
 .CardMainContainer {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: auto;
-  /* height: 100%; */
+
+  width: 100vw;
 
   justify-content: center;
   align-items: center;
@@ -414,8 +413,9 @@ https://github.com/er129idm/introweb-2020sp-d/tree/master/class-12 */
 
 /* takes user to the homepage when clicked */
 .Logo {
+  display: flex;
   /* display: grid; */
-  grid-column: 1/6;
+  /* grid-column: 1/6; */
     /* float: left; */
     position: absolute;
     left:0;
@@ -441,6 +441,8 @@ https://github.com/er129idm/introweb-2020sp-d/tree/master/class-12 */
   line-height: 2;
 
   grid-area: 1/1/1/5;
+  grid-column-end: span 5;
+
 }
 
 #previous {
@@ -452,12 +454,9 @@ https://github.com/er129idm/introweb-2020sp-d/tree/master/class-12 */
 
 /* using CSS grid */
 .cardDeck {
-  /* margin-top: 12vmin; */
   display: grid;
-  grid-template-columns: auto 2fr 2fr 2fr auto;
-  /* grid-template-rows: 1fr 2fr 2fr 2fr 1fr; */
+  grid-template-columns: 1fr 2fr 2fr 2fr;
   grid-gap:2vmin;
-  /* height: 61vh; */
   margin-left: 7vmin;
   margin-right: 7vmin;
 }
@@ -475,10 +474,12 @@ https://github.com/er129idm/introweb-2020sp-d/tree/master/class-12 */
   height: 39vmin;
   justify-content: center;
   border-radius: 5%;
-
-  grid-row: 3;
   object-fit: cover;
+
+
 }
+
+
 
 .card img {
   width: 100%;
@@ -510,4 +511,218 @@ https://github.com/er129idm/introweb-2020sp-d/tree/master/class-12 */
   height: 100vh;
   animation: congrats 2s infinite;
 
+}
+
+/* .everything {
+display: grid;
+grid-template-columns: 1fr 6fr 1fr;
+} */
+
+.all{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonCard {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+}
+
+.pulseButton {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .all{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-top: 7vmin; */
+  }
+
+  .Logo {
+    display: flex;
+    /* display: grid; */
+    /* grid-column: 1/6; */
+      /* float: left; */
+      float: top left;
+      left:0;
+      top:0;
+
+  }
+
+  .Logo img{
+    width: 23%;
+    height: auto;
+    object-fit: cover;
+    padding: 1vmin;
+  }
+
+  .mainContainer2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-content: center;
+    margin-top: 7vmin;
+  }
+
+  .instruction {
+    font-family: 'Spartan';
+    font-size: 2vmin;
+    text-align: center;
+    /*
+    align-items: center;
+    justify-content: center; */
+    margin-right: 10vmin;
+    margin-left: 10vmin;
+    margin-bottom: 5vmin;
+  }
+
+  .CardMainContainer {
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    /* float: left; */
+    align-items: center;
+    -webkit-animation: clearIn 1s ease-in;
+
+    margin: 0;
+  }
+
+  .CardContainer {
+    width: 50vmin;
+    height: 55vmin;
+    background: white;
+    border-radius: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 3vmin 3vmin 3vmin;
+
+
+  }
+
+  .image {
+    width: 80%;
+    height: 65%;
+    background: pink;
+    /* object-fit: cover; */
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+
+  .text {
+    font-family: 'Spartan';
+    font-size: 5vmin;
+    color: black;
+
+  }.buttonNavigation {
+    padding: 2vmin 3vmin;
+    font-family: 'Spartan';
+    font-size: 2vmin;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #f7bedf;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 1vmin #999;
+    margin-bottom: 3vmin;
+    /* margin-top: 3vmin; */
+  }
+
+  .buttonCard {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .item-6x {
+    grid-column-end: span 5;
+  }
+
+  .button1 {
+    padding: 2vmin 4vmin  ;
+    font-family: 'Spartan';
+    font-size: 2vmin;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #7aa3bf;
+    border: none;
+    border-radius: 5vmin;
+    box-shadow: 0 1vmin #999;
+    margin-top: 3vmin;
+
+  }
+
+  /* .card {
+    background: #f7bedf;
+    height: 39vmin;
+    justify-content: center;
+    border-radius: 5%;
+
+    grid-row: 3;
+    object-fit: cover;
+  } */
+
+.card {
+  grid-column-end: span 5;
+
+}
+
+.nameButton {
+  grid-row:4;
+  grid-column: 1;
+  grid-column-end: span 5;
+}
+
+.nameButton2 {
+  grid-row: 6;
+  grid-column: 1;
+
+  grid-column-end: span 5;
+}
+
+.nameButton3 {
+  grid-row:8;
+  grid-column: 1;
+  grid-column-end: span 5;
+}
+
+.cardDeck {
+  margin: 0 20vmin 0 20vmin;
+}
+
+.pulseButton {
+  display: grid;
+  grid-column-end: span 5;
+  justify-items: center;
+  margin-bottom: 3vmin;
 }

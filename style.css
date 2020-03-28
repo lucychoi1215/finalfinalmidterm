@@ -94,3 +94,12 @@
     -webkit-animation: bounceIn 1s ease-in;
     /* -webkit-animation: changeTextColor 3s ease-in infinite; */
 }
+
+
+/* Media Quiery */
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
+}
